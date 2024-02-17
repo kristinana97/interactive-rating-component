@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI)
-- Live Site URL: (https://interactive-rating-component97.netlify.app/)
+- Solution URL: [interactive-rating-component-koxpeBUmI](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI)
+- Live Site URL: [netlify.app](https://interactive-rating-component97.netlify.app/)
 
 ## My process
 
