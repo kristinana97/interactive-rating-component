@@ -1,0 +1,168 @@
+$color-veryDarkBlue: hsl(216, 12%, 8%);
+$color-darkBlue: hsl(213, 19%, 18%);
+$color-mediumGrey: hsl(218, 11%, 29%);
+$color-lightGrey: hsl(217, 12%, 63%);
+$color-white: hsl(0, 0%, 100%);
+$color-orange: hsl(25, 97%, 53%);
+
+$mobile-tablet-width: 767px;
+$mobile-mobileL-width: 426px;
+$mobile-mobileM-width: 376px;
+$mobile-mobileS-width: 360px;
+
+@mixin media-tablet {
+    @media (max-width: $mobile-tablet-width) { @content;}   
+}
+@mixin media-mobileL {
+    @media (max-width: $mobile-mobileL-width) { @content;}   
+}
+@mixin media-mobileM {
+    @media (max-width: $mobile-mobileM-width) { @content;}   
+}
+@mixin media-mobileS {
+    @media (max-width: $mobile-mobileS-width) { @content;}   
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: $color-veryDarkBlue;
+}
+h2 {
+    margin: 0;
+    padding: 0;
+    color: $color-white;
+    font-size: 2.7rem;
+    padding: 2.6rem 0 1.8rem 0;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    @include media-tablet {
+        margin-top: 15%;
+    }
+    @include media-mobileL {
+        margin-top: 25%;
+    }
+}
+.main-box {
+    max-width: 338px;
+    background-color: $color-darkBlue;
+    padding: 3.6rem;
+    border-radius: 3rem;
+    @include media-mobileL {
+        max-width: 300px;
+    }
+    @include media-mobileM {
+        max-width: 270px;
+    }
+    @include media-mobileS {
+        max-width: 230px;
+    }
+}
+.main-box-content {
+    display: flex;
+    flex-direction: column;
+    .circle {
+        background-color: $color-mediumGrey;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5rem;
+        .star {
+            background-color: $color-orange;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            display: inline-block;
+            height: 23px;
+            width: 23px;
+        }
+    }
+    .container-rating {
+        display: flex;
+        justify-content: space-between;
+        color: $color-lightGrey;
+        .rating-icon {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            background-color: $color-mediumGrey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px;
+            cursor: pointer;
+                &:hover {
+                    background-color: $color-lightGrey;
+                    color: $color-white;
+                    transition: 0.5s;
+                }
+                @include media-mobileS {
+                    width: 4rem;
+                    height: 4rem;
+                }
+        }
+        .rating-selected {
+            background-color: $color-orange;
+            color: $color-white;
+            transition: 0.1s;
+        }
+    }
+    .submit {
+        background-color: $color-orange;
+        padding: 1rem;
+        border: none;
+        border-radius: 5rem;
+        text-transform: uppercase;
+        color: $color-white;
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-top: 2.6rem;
+            &:hover {
+                background-color: $color-white;
+                color: $color-orange;
+                transition: 0.5s;
+            }
+    }
+}
+.main-text {
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    color: $color-lightGrey;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2.6rem;
+}
+.thanks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .main-text {
+        text-align: center;
+    }
+}
+.hidden {
+    display: none;
+}
+.selected {
+    background-color: $color-mediumGrey;
+    padding: 1rem 1.8rem ;
+    border: none;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    color: $color-orange;
+    margin-top: 3.2rem;
+}
+.attribution, a {
+    color: $color-mediumGrey;
+    padding-top: 1rem;
+        a:hover {
+            color: $color-orange;
+            transition: 0.5s;
+        }
+}
